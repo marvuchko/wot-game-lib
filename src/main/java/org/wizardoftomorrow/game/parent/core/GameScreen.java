@@ -5,7 +5,7 @@ import com.badlogic.gdx.ScreenAdapter;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
-import org.lwjgl.opengl.GL20;
+import org.lwjgl.opengl.GL11;
 
 import static org.wizardoftomorrow.game.parent.utils.Constants.PIXELS_PER_METER;
 
@@ -25,7 +25,7 @@ public class GameScreen extends ScreenAdapter {
 
     private static void clear() {
         Gdx.gl.glClearColor(0, 0, 0, 1);
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+        Gdx.gl.glClear(GL11.GL_COLOR_BUFFER_BIT);
     }
 
     private void renderDebugger() {

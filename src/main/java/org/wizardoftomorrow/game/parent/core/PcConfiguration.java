@@ -17,21 +17,21 @@ public class PcConfiguration extends Lwjgl3ApplicationConfiguration {
     int width;
     int height;
     boolean fullScreenMode;
-    String title;
+    String gameTitle;
 
     @Builder
-    public PcConfiguration(int width, int height, boolean fullScreenMode, String title) {
+    public PcConfiguration(int width, int height, boolean fullScreenMode, String gameTitle) {
         this.width = width;
         this.height = height;
         this.fullScreenMode = fullScreenMode;
-        this.title = title;
+        this.gameTitle = gameTitle;
         init();
     }
 
     private void init() {
         setIdleFPS(IDLE_FPS);
         useVsync(true);
-        setTitle(title);
+        setTitle(gameTitle);
 
         if (isFullScreenMode()) {
             setFullscreenMode(getDisplayMode());
